@@ -1,5 +1,96 @@
-/* ================================
-   HYBRID. - Basic CSS Setup
-   ================================ */
+/* Browser Reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 
-   
+}
+
+a,
+a:visited,
+a:active,
+a:hover,
+a:focus {
+   color: inherit;
+   text-decoration: none;
+   outline: none;
+   background: none;
+}
+
+/* Root Colors */
+:root {
+   --black: #111111;
+   --darkgray: #1b1b1b;
+   --gray: #2a2a2a;
+   --white: #f5f5f5;
+   --lightgray: #b5b5b5;
+}
+
+/* Smooth Scroll */
+html {
+   scroll-behavior: smooth;
+}
+
+/* Basics */
+html,
+body {
+   background-color: var(--black);
+   color: var(--white);
+   font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    font-size: 3.333rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2.222rem;
+}
+
+h3 {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.666rem;
+}
+
+nav a {
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.111rem;
+}
+
+img {
+   width: 100%;
+   display: block;
+}
+
+section {
+   padding: 100px 10%;
+}
+
+a {
+   text-decoration: none;
+   color: white;
+}
+
+/* Header */
+
+
+/* Navigation */
+
+
+/* Hero */
+
+
+/* Sections */
+
+/* Concept */
+
+
+/* Footer */
