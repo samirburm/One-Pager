@@ -19,11 +19,21 @@ a:focus {
 
 /* Root Colors */
 :root {
-   --black: #111111;
-   --darkgray: #1b1b1b;
-   --gray: #2a2a2a;
-   --white: #f5f5f5;
-   --lightgray: #b5b5b5;
+    --black: #111111;
+    --darkgray: #1b1b1b;
+    --gray: #2a2a2a;
+    --white: #f5f5f5;
+    --lightgray: #b5b5b5;
+}
+
+/* Lightmode */
+
+.lightmode {
+    --black: #f5f5f5;
+    --darkgray: #e7e7e7;
+    --gray: #d5d5d5;
+    --white: #111111;
+    --lightgray: #555555;
 }
 
 /* Smooth Scroll */
@@ -79,13 +89,36 @@ a {
    color: white;
 }
 
-
-
-
 /* Navigation */
 nav {
    display: flex;
    gap: 32px;
+
+   margin-left: auto;
+   margin-right: 32px;
+}
+
+/* Button Lightmode */
+
+#themebutton {
+    padding: 12px 24px;
+
+    border: 2px solid var(--white);
+
+    background: transparent;
+
+    color: var(--white);
+
+    border-radius: 100px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#themebutton:hover {
+    background-color: var(--white);
+    color: var(--black);
 }
 
 /* Header */
@@ -94,12 +127,17 @@ header {
    top: 0;
    left: 0;
    width: 100%;
+
    z-index: 1000;
+
    display: flex;
-   justify-content: flex-end;
+   justify-content: space-between;
    align-items: center;
+
    padding: 24px 48px;
-   background-color: rgba(17, 17, 17, 0.85);
+
+   background-color: var(--black);
+
    backdrop-filter: blur(10px);
 }
 
@@ -204,7 +242,7 @@ header {
 
 .concepttext h3,
 .conceptcard h3 {
-    margin-bottom: 24px;
+   margin-bottom: 24px;
 }
 
 /* Training */
@@ -227,11 +265,11 @@ header {
 }
 
 .trainingcard:not(.bigcard):not(.widecard) {
-    justify-content: flex-start;
+   justify-content: flex-start;
 }
 
 .trainingcard h3 {
-    margin-bottom: 24px;
+   margin-bottom: 24px;
 }
 
 .trainingcard:hover {
@@ -246,12 +284,12 @@ header {
 }
 
 .widecard {
-    grid-column: span 2;
-    justify-content: flex-start;
+   grid-column: span 2;
+   justify-content: flex-start;
 }
 
 .widecard h3 {
-    margin-bottom: 24px;
+   margin-bottom: 24px;
 }
 
 
@@ -313,17 +351,52 @@ header {
 /* Join */
 
 .joincontainer {
-   background-color: var(--darkgray);
-   padding: 64px;
-   border-radius: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 48px;
+
+    align-items: center;
+
+    background-color: var(--darkgray);
+
+    padding: 64px;
+
+    border-radius: 32px;
+
+    overflow: hidden;
+}
+
+.joincontent h2 {
+    margin-bottom: 24px;
+
+    max-width: 500px;
 }
 
 .jointext {
-   max-width: 600px;
-   margin-bottom: 32px;
-   color: var(--lightgray);
+    margin-bottom: 40px;
+
+    max-width: 450px;
+
+    line-height: 1.6;
 }
 
+.joinimage img {
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+}
+
+#welcomemessage {
+    margin-top: 24px;
+
+    color: var(--lightgray);
+
+    font-weight: 700;
+}
 
 /* Footer */
 

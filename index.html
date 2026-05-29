@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HYBRID.</title>
   <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -24,6 +23,10 @@
       <a href="#join">Join</a>
 
     </nav>
+
+    <button id="themebutton">
+      Light Mode
+    </button>
 
   </header>
 
@@ -185,12 +188,10 @@
           <h3>Recovery</h3>
 
           <p>
-          <p>
             Regeneration, Schlaf und Mobility
             sind essenziell für langfristige
             Performance, Belastbarkeit und
             nachhaltigen Fortschritt.
-          </p>
           </p>
 
         </article>
@@ -291,35 +292,36 @@
     <!-- Join Section -->
     <section id="join">
 
-      <!-- Section Title -->
-      <div class="sectiontitle">
-
-        <p class="sectionlabel">
-          Join the Movement
-        </p>
-
-        <h2>
-          Trainiere für mehr als nur eine Disziplin.
-        </h2>
-
-      </div>
-
-      <!-- Join Content -->
       <div class="joincontainer">
 
-        <p class="jointext">
+        <div class="joincontent">
 
-          HYBRID. steht für Kraft,
-          Ausdauer und Disziplin.
+          <p class="sectionlabel">
+            Join the Movement
+          </p>
 
-        </p>
+          <h2>
+            Trainiere für mehr als nur eine Disziplin.
+          </h2>
 
-        <!-- Join Button -->
-        <a href="#" class="joinbutton">
+          <p class="jointext">
+            HYBRID. steht für Kraft,
+            Ausdauer und Disziplin.
+          </p>
 
-          Join Now
+          <button class="joinbutton" id="joinbutton">
+            Join Now
+          </button>
 
-        </a>
+          <p id="welcomemessage"></p>
+
+        </div>
+
+        <div class="joinimage">
+
+          <img src="assets/img/motivation.jpg" alt="Hybrid Athlete">
+
+        </div>
 
       </div>
 
@@ -347,6 +349,29 @@
     </div>
 
   </footer>
+
+<script>
+
+    const themebutton = document.getElementById("themebutton");
+
+    themebutton.addEventListener("click", () => {
+
+        document.body.classList.toggle("lightmode");
+
+    });
+
+
+    const joinbutton = document.getElementById("joinbutton");
+
+    const welcomemessage = document.getElementById("welcomemessage");
+
+    joinbutton.addEventListener("click", () => {
+
+        welcomemessage.textContent = "Welcome to HYBRID.";
+
+    });
+
+</script>
 
 </body>
 
