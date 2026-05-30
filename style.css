@@ -19,21 +19,30 @@ a:focus {
 
 /* Root Colors */
 :root {
-    --black: #111111;
-    --darkgray: #1b1b1b;
-    --gray: #2a2a2a;
-    --white: #f5f5f5;
-    --lightgray: #b5b5b5;
+   --black: #111111;
+   --darkgray: #1b1b1b;
+   --gray: #2a2a2a;
+   --white: #f5f5f5;
+   --lightgray: #b5b5b5;
+}
+
+/* System Dark Mode */
+@media (prefers-color-scheme: dark) {
+
+   :root {
+      color-scheme: dark;
+   }
+
 }
 
 /* Lightmode */
 
 .lightmode {
-    --black: #f5f5f5;
-    --darkgray: #e7e7e7;
-    --gray: #d5d5d5;
-    --white: #111111;
-    --lightgray: #555555;
+   --black: #f5f5f5;
+   --darkgray: #e7e7e7;
+   --gray: #d5d5d5;
+   --white: #111111;
+   --lightgray: #555555;
 }
 
 /* Smooth Scroll */
@@ -101,24 +110,24 @@ nav {
 /* Button Lightmode */
 
 #themebutton {
-    padding: 12px 24px;
+   padding: 12px 24px;
 
-    border: 2px solid var(--white);
+   border: 2px solid var(--white);
 
-    background: transparent;
+   background: transparent;
 
-    color: var(--white);
+   color: var(--white);
 
-    border-radius: 100px;
+   border-radius: 100px;
 
-    cursor: pointer;
+   cursor: pointer;
 
-    transition: 0.3s;
+   transition: 0.3s;
 }
 
 #themebutton:hover {
-    background-color: var(--white);
-    color: var(--black);
+   background-color: var(--white);
+   color: var(--black);
 }
 
 /* Header */
@@ -320,8 +329,13 @@ header {
    grid-column: span 2;
 }
 
-.tallimage {
-   grid-row: span 2;
+.bottomimage {
+   height: 250px;
+}
+
+.bottomimage img {
+   height: 100%;
+   object-fit: cover;
 }
 
 
@@ -351,51 +365,51 @@ header {
 /* Join */
 
 .joincontainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
 
-    gap: 48px;
+   gap: 48px;
 
-    align-items: center;
+   align-items: center;
 
-    background-color: var(--darkgray);
+   background-color: var(--darkgray);
 
-    padding: 64px;
+   padding: 64px;
 
-    border-radius: 32px;
+   border-radius: 32px;
 
-    overflow: hidden;
+   overflow: hidden;
 }
 
 .joincontent h2 {
-    margin-bottom: 24px;
+   margin-bottom: 24px;
 
-    max-width: 500px;
+   max-width: 500px;
 }
 
 .jointext {
-    margin-bottom: 40px;
+   margin-bottom: 40px;
 
-    max-width: 450px;
+   max-width: 450px;
 
-    line-height: 1.6;
+   line-height: 1.6;
 }
 
 .joinimage img {
-    width: 100%;
-    height: 500px;
+   width: 100%;
+   height: 500px;
 
-    object-fit: cover;
+   object-fit: cover;
 
-    border-radius: 24px;
+   border-radius: 24px;
 }
 
 #welcomemessage {
-    margin-top: 24px;
+   margin-top: 24px;
 
-    color: var(--lightgray);
+   color: var(--lightgray);
 
-    font-weight: 700;
+   font-weight: 700;
 }
 
 /* Footer */
@@ -435,11 +449,42 @@ header {
       grid-row: auto;
    }
 
+
    nav {
       gap: 16px;
+      margin-right: 16px;
+   }
+
+   nav a {
+      font-size: 0.9rem;
+   }
+
+   #themebutton {
+      padding: 8px 14px;
+      font-size: 0.8rem;
    }
 
    .herocontent h1 {
       font-size: 5rem;
    }
+
+}
+
+
+@media (max-width: 600px) {
+
+   nav {
+      gap: 10px;
+      margin-right: 10px;
+   }
+
+   nav a {
+      font-size: 0.75rem;
+   }
+
+   #themebutton {
+      padding: 6px 10px;
+      font-size: 0.7rem;
+   }
+
 }
