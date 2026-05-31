@@ -96,7 +96,7 @@ section {
 
 a {
    text-decoration: none;
-   color: white;
+   color: inherit;
 }
 
 /* Navigation */
@@ -220,20 +220,6 @@ header {
    max-width: 900px;
 }
 
-.herocontent h1 {
-   font-size: clamp(5rem, 15vw, 14rem);
-   font-weight: 900;
-   line-height: 0.9;
-   margin-bottom: 24px;
-}
-
-.herocontent h2 {
-   font-size: 1.5rem;
-   max-width: 500px;
-   margin-bottom: 40px;
-   color: var(--lightgray);
-}
-
 
 /* Button */
 
@@ -327,6 +313,12 @@ header {
    background-image: url("assets/img/deadlift.jpg");
    background-size: cover;
    background-position: center;
+   color: #f5f5f5;
+}
+
+.bigcard h3,
+.bigcard p {
+   color: #f5f5f5;
 }
 
 .widecard {
