@@ -66,6 +66,7 @@ h1 {
    margin-bottom: 30px;
 }
 
+
 h2 {
    font-family: Arial, sans-serif;
    font-weight: 700;
@@ -151,6 +152,42 @@ header {
 }
 
 /* Hero */
+
+@keyframes slideleft {
+
+   from {
+      opacity: 0;
+      transform: translateX(-150px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateX(0);
+   }
+
+}
+
+.herocontent h1 {
+   font-size: clamp(5rem, 15vw, 14rem);
+   font-weight: 900;
+   line-height: 0.9;
+   margin-bottom: 24px;
+
+   animation: slideleft 0.6s ease-out;
+}
+
+.herocontent h2 {
+   font-size: 1.5rem;
+   max-width: 500px;
+   margin-bottom: 40px;
+   color: var(--lightgray);
+
+   animation: slideleft 0.8s ease-out;
+}
+
+.button {
+   animation: slideleft 1s ease-out;
+}
 
 #hero {
    min-height: 100vh;
@@ -443,11 +480,23 @@ header {
 
    .bigcard,
    .widecard,
-   .bigimage,
-   .tallimage {
+   .bigimage {
       grid-column: auto;
       grid-row: auto;
    }
+
+
+   .galleryitem,
+   .bottomimage {
+      height: 250px;
+   }
+
+   .galleryitem img,
+   .bottomimage img {
+      height: 100%;
+      object-fit: cover;
+   }
+
 
 
    nav {
