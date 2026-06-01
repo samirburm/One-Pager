@@ -36,7 +36,6 @@ a:focus {
 }
 
 /* Lightmode */
-
 .lightmode {
    --black: #f5f5f5;
    --darkgray: #e7e7e7;
@@ -56,18 +55,18 @@ body {
    background-color: var(--black);
    color: var(--white);
    font-family: "Inter", sans-serif;
+   line-height: 1.5;
 }
 
 h1 {
    font-weight: 900;
    font-size: 3.333rem;
-   text-align: center;
    margin-bottom: 30px;
 }
 
 h2 {
    font-weight: 700;
-   font-size: 2.222rem;
+   font-size: clamp(1.8rem, 4vw, 2.8rem);
 }
 
 h3 {
@@ -87,11 +86,6 @@ img {
 
 section {
    padding: 100px 10%;
-}
-
-a {
-   text-decoration: none;
-   color: inherit;
 }
 
 /* Navigation */
@@ -164,21 +158,19 @@ header {
 
 .herocontent h1 {
    font-family: "Montserrat", sans-serif;
-
    font-size: clamp(5rem, 15vw, 14rem);
    font-weight: 900;
    line-height: 0.9;
    margin-bottom: 24px;
-
+   text-align: left;
    animation: slideleft 0.6s ease-out;
 }
 
 .herocontent h2 {
-   font-size: 1.5rem;
+   font-size: 2.5rem;
    max-width: 500px;
    margin-bottom: 40px;
    color: var(--lightgray);
-
    animation: slideleft 0.8s ease-out;
 }
 
@@ -215,6 +207,7 @@ header {
 
 .herocontent {
    max-width: 900px;
+   text-align: left;
 }
 
 
@@ -307,7 +300,7 @@ header {
 
 .bigcard {
    grid-row: span 2;
-   background-image: url("assets/img/deadlift.jpg");
+   background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url("assets/img/deadlift.jpg");
    background-size: cover;
    background-position: center;
    color: #f5f5f5;
@@ -409,8 +402,8 @@ header {
 
 .joincontent h2 {
    margin-bottom: 24px;
-
    max-width: 500px;
+   font-size: clamp(2rem, 5vw, 4.5rem);
 }
 
 .jointext {
@@ -490,8 +483,6 @@ header {
       object-fit: cover;
    }
 
-
-
    nav {
       gap: 16px;
       margin-right: 16px;
@@ -510,10 +501,37 @@ header {
       font-size: 5rem;
    }
 
+   .herocontent h2 {
+      font-size: 2rem;
+   }
+
+   .joincontainer {
+      grid-template-columns: 1fr;
+   }
+
+   .joinimage img {
+      height: 350px;
+   }
+
 }
 
-
 @media (max-width: 600px) {
+
+   .herocontent h1 {
+      font-size: 3.5rem;
+   }
+
+   .sectionlabel {
+      font-size: 0.75rem;
+   }
+
+   .herocontent h2 {
+      font-size: 1.5rem;
+   }
+
+   h3 {
+      font-size: 1.3rem;
+   }
 
    nav {
       gap: 10px;
@@ -527,6 +545,49 @@ header {
    #themebutton {
       padding: 6px 10px;
       font-size: 0.7rem;
+   }
+
+   .joincontainer {
+      padding: 32px;
+   }
+
+   .joinimage img {
+      height: 280px;
+   }
+}
+
+@media (max-width: 400px) {
+
+   header {
+      padding: 16px 12px;
+   }
+
+   .herocontent h1 {
+      font-size: 3rem;
+   }
+
+   .herocontent h2 {
+      font-size: 1.2rem;
+      max-width: 280px;
+   }
+
+   nav {
+      gap: 8px;
+      margin-right: 8px;
+   }
+
+   nav a {
+      font-size: 0.7rem;
+
+   }
+
+   #themebutton {
+      padding: 5px 8px;
+      font-size: 0.65rem;
+   }
+
+   .joincontent h2 {
+      font-size: 2rem;
    }
 
 }

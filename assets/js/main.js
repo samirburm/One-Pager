@@ -1,4 +1,4 @@
-// Light/Dark Mode Button animation
+// Light/dark mode button animation
 
 const themebutton = document.getElementById("themebutton");
 
@@ -13,7 +13,7 @@ themebutton.addEventListener("click", () => {
 });
 
 
-// Join Button animation
+// Join Button interaction
 
 const joinbutton = document.getElementById("joinbutton");
 

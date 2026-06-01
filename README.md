@@ -32,3 +32,9 @@ Während des Projekts hat mich überrascht, wie viel man bereits mit reinem CSS 
 Ausserdem hat mich überrascht, wie viele Gestaltungsmöglichkeiten CSS bietet. Durch den Einsatz von Cards, Grid-Layouts und Hover-Effekten konnte ich ein modernes Design erstellen.
 
 Ebenfalls nicht erwartet hatte ich, wie sicher ich im Verlauf des Projekts im Umgang mit HTML und CSS geworden bin. Auch JavaScript war für mich zu Beginn neu. Durch die Umsetzung des Light-/Dark-Modes und der interaktiven Elemente habe ich jedoch ein besseres Verständnis dafür entwickelt und verstehe nun die Grundlagen von JavaScript deutlich besser.
+
+## Website Vorschau
+
+![HYBRID Website](assets/img/website.png)
+
+*Screenshot der fertigen Website im Dark Mode.*
